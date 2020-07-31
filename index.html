@@ -42,13 +42,13 @@
       </div>
       <hr>
     </div>
-    <form class="">
+    <form method="POST" action="form.php">
       <div class="row ">
         <div class="col-lg-6 form-group">
           <div class="question font-weight-bold">
             <label class="label" id="qn1">First Name:</label>
             <a onclick="readOutLoud(1);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
-            <input type="text" name="" id="ans1" class="form-control" placeholder="First Name">
+            <input type="text" name="FName" id="ans1" class="form-control" placeholder="First Name">
           </div>
         </div>
         <div class="col-lg-6 py-4">
@@ -62,7 +62,7 @@
           <div class="question font-weight-bold">
             <label class="label" id="qn2">Last Name:</label>
             <a onclick="readOutLoud(2);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
-            <br><input type="text" name="" id="ans2" class="form-control" placeholder="Last Name">
+            <br><input type="text" name="LName" id="ans2" class="form-control" placeholder="Last Name">
           </div>
         </div>
         <div class="col-lg-6 py-4">
@@ -76,7 +76,7 @@
           <div class="question font-weight-bold">
             <label class="label" id="qn3">DOB:</label><a onclick="readOutLoud(3);"><i class="fa fa-volume-up"
                 aria-hidden="true"></i></a>
-            <br><input type="text" name="" id="ans3" class="form-control" placeholder="Date Of Birth">
+            <br><input type="text" name="Age" id="ans3" class="form-control" placeholder="Date Of Birth">
           </div>
         </div>
         <div class="col-lg-6 py-4">
@@ -90,7 +90,7 @@
           <div class="question font-weight-bold">
             <label class="label" id="qn4">Sex:</label>
             <a onclick="readOutLoud(4);"><i class="fa fa-volume-up"></i></a>
-            <br><input type="text" name="" id="ans4" class="form-control" placeholder="Sex">
+            <br><input type="text" name="Sex" id="ans4" class="form-control" placeholder="Sex">
           </div>
         </div>
         <div class="col-lg-6 py-4">
@@ -104,7 +104,7 @@
           <div class="question font-weight-bold">
             <label class="label" id="qn5">Phone Number:</label><a onclick="readOutLoud(5);"><i class="fa fa-volume-up"
                 aria-hidden="true"></i></a>
-            <br><input type="text" name="" id="ans5" class="form-control" placeholder="Phone Number">
+            <br><input type="text" name="Phone" id="ans5" class="form-control" placeholder="Phone Number">
           </div>
         </div>
         <div class="col-lg-6 py-4">
@@ -118,7 +118,7 @@
           <div class="question font-weight-bold">
             <label class="label" id="qn6">Address:</label>
             <a onclick="readOutLoud(6);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
-            <br><textarea type="text" rows="2" id="ans6" class="form-control" placeholder="Address"></textarea>
+            <br><textarea type="text" name="Address"rows="2" id="ans6" class="form-control" placeholder="Address"></textarea>
           </div>
         </div>
         <div class="col-lg-6 py-4">
@@ -133,7 +133,7 @@
             <label class="label" id="qn7">Message:</label>
             <a onclick="readOutLoud(7);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
             <br>
-            <textarea class="form-control" id="ans7" class="form-control" rows="3"
+            <textarea class="form-control" name="Message" id="ans7" class="form-control" rows="3"
               placeholder="Type your message here..."></textarea>
           </div>
         </div>
@@ -145,7 +145,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6 form-group">
-          <input action="./form.php" method="put" class=" btn btn-primary" type="submit" value="Submit">
+          <input class="btn btn-primary" type="submit" value="Submit">
         </div>
       </div>
     </form>
