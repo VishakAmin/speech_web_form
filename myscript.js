@@ -2,7 +2,7 @@ try {
   var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   var recognition = new SpeechRecognition();
 }
-catch(e) {
+catch (e) {
   console.error(e);
   $('.no-browser-support').show();
   $('.app').hide();
@@ -10,7 +10,7 @@ catch(e) {
 
 
 var outLocation;
-function setOutputLocation(ansId='general') {
+function setOutputLocation(ansId = 'general') {
   outLocation = document.getElementById(ansId);
   outLocation.value = 'nice';
   console.log(`output set: ${ansId}`);
@@ -26,7 +26,7 @@ function setOutputLocation(ansId='general') {
 recognition.continuous = false;
 
 // This block is called every time the Speech APi captures a line. 
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
 
   // event is a SpeechRecognitionEvent object.
   // It holds all the lines we have captured so far. 
@@ -41,7 +41,7 @@ recognition.onresult = function(event) {
   // There is no official solution so far so we have to handle an edge case.
   var mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
 
-  if(!mobileRepeatBug) {
+  if (!mobileRepeatBug) {
     console.log(transcript);
     outLocation.value = transcript;
   }
@@ -69,27 +69,27 @@ recognition.onresult = function(event) {
 async function readOutLoud(qid) {
   const qnId = `qn${qid}`;
   var msg = document.getElementById(qnId).innerHTML;
-	var speech = new SpeechSynthesisUtterance();
+  var speech = new SpeechSynthesisUtterance();
   console.log(msg);
   // Set the text and voice attributes.
-  speech.text = "Please tell Your"+msg+"After the beep ";
-	speech.volume = 1;
-	speech.rate = 1;
-	speech.pitch = 1;
+  speech.text = "Please tell Your" + msg + "After the beep ";
+  speech.volume = 1;
+  speech.rate = 1;
+  speech.pitch = 1;
   window.speechSynthesis.speak(speech);
   await setTimeout(function () {
-    beep(100,520,200);
-  },3000);
-  
+    beep(100, 520, 200);
+  }, 3000);
+
 }
 
 
 
 function deleteNote(dateTime) {
-  localStorage.removeItem('note-' + dateTime); 
+  localStorage.removeItem('note-' + dateTime);
 }
 
-async function recStart(qid){
+async function recStart(qid) {
   await readOutLoud(qid);
   const ansId = `ans${qid}`;
   console.log(ansId);
@@ -120,4 +120,9 @@ function beep(vol, freq, duration) {
   u.gain.value = vol * 0.01
   v.start(a.currentTime)
   v.stop(a.currentTime + duration * 0.001)
+}
+
+
+function foo() {
+  return confirm("Form Submitted Successfully.! Thank You.")
 }
