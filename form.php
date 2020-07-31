@@ -24,6 +24,7 @@
                         echo "N/a";}else{ echo $_POST["Phone"];} ?><br>
     Address    : <?php if($_POST["Address"]==''){
                         echo "N/a";} else {echo $_POST["Address"]; }?>
+    Message :    <?php if($_POST["Message"]==''){echo "N/a";}else{ echo $_POST["Message"];} ?>
     
 </body>
 </html>
