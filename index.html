@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Voice@Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Form</title>
+  <script type="text/javascript" src="myscript.js"></script>
+
+  <style>
+    body {
+      background-image: url('images/bg-01.jpg');
+    }
+
+    i {
+      color: aliceblue;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container py-5">
+    <div class="site-section">
+      <div class="">
+        <h2 class="display-4">Patient Personal Details</h2>
+        <p class="display-5 font-italic"> A Sample Patient Registeration Form which can be filled either by
+          hospital staff or any individual.</p>
+
+      </div>
+      <hr>
+    </div>
+    <form class="">
+      <div class="row ">
+        <div class="col-lg-6 form-group">
+          <div class="question font-weight-bold">
+            <label class="label" id="qn1">First Name:</label>
+            <a onclick="readOutLoud(1);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+            <input type="text" name="" id="ans1" class="form-control" placeholder="First Name">
+          </div>
+        </div>
+        <div class="col-lg-6 py-4">
+          <a class="btn btn-primary" onclick="recStart(1);"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+          <a class="btn btn-dark" onclick="recStop();"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+          <a class="btn btn-danger" onclick="clearInput(1);"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 form-group">
+          <div class="question font-weight-bold">
+            <label class="label" id="qn2">Last Name:</label>
+            <a onclick="readOutLoud(2);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+            <br><input type="text" name="" id="ans2" class="form-control" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="col-lg-6 py-4">
+          <a class="btn btn-primary" onclick="recStart(2);"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+          <a class="btn btn-dark" onclick="recStop();"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+          <a class="btn btn-danger" onclick="clearInput(2);"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 form-group">
+          <div class="question font-weight-bold">
+            <label class="label" id="qn3">DOB:</label><a onclick="readOutLoud(3);"><i class="fa fa-volume-up"
+                aria-hidden="true"></i></a>
+            <br><input type="text" name="" id="ans3" class="form-control" placeholder="Date Of Birth">
+          </div>
+        </div>
+        <div class="col-lg-6 py-4">
+          <a class="btn btn-primary" onclick="recStart(3);"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+          <a class="btn btn-dark" onclick="recStop();"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+          <a class="btn btn-danger" onclick="clearInput(3);"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-lg-6 form-group">
+          <div class="question font-weight-bold">
+            <label class="label" id="qn4">Sex:</label>
+            <a onclick="readOutLoud(4);"><i class="fa fa-volume-up"></i></a>
+            <br><input type="text" name="" id="ans4" class="form-control" placeholder="Sex">
+          </div>
+        </div>
+        <div class="col-lg-6 py-4">
+          <a class="btn btn-primary" onclick="recStart(4);"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+          <a class="btn btn-dark" onclick="recStop();"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+          <a class="btn btn-danger" onclick="clearInput(4);"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-lg-6 form-group">
+          <div class="question font-weight-bold">
+            <label class="label" id="qn5">Phone Number:</label><a onclick="readOutLoud(5);"><i class="fa fa-volume-up"
+                aria-hidden="true"></i></a>
+            <br><input type="text" name="" id="ans5" class="form-control" placeholder="Phone Number">
+          </div>
+        </div>
+        <div class="col-lg-6 py-4">
+          <a class="btn btn-primary" onclick="recStart(5);"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+          <a class="btn btn-dark" onclick="recStop();"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+          <a class="btn btn-danger" onclick="clearInput(5);"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6  form-group">
+          <div class="question font-weight-bold">
+            <label class="label" id="qn6">Address:</label>
+            <a onclick="readOutLoud(6);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+            <br><textarea type="text" rows="2" id="ans6" class="form-control" placeholder="Address"></textarea>
+          </div>
+        </div>
+        <div class="col-lg-6 py-4">
+          <a class="btn btn-primary" onclick="recStart(6);"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+          <a class="btn btn-dark" onclick="recStop();"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+          <a class="btn btn-danger" onclick="clearInput(6);"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6  form-group">
+          <div class="question font-weight-bold">
+            <label class="label" id="qn7">Message:</label>
+            <a onclick="readOutLoud(7);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+            <br>
+            <textarea class="form-control" id="ans7" class="form-control" rows="3"
+              placeholder="Type your message here..."></textarea>
+          </div>
+        </div>
+        <div class="col-lg-6 py-4">
+          <a class="btn btn-primary" onclick="recStart(7);"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+          <a class="btn btn-dark" onclick="recStop();"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+          <a class="btn btn-danger" onclick="clearInput(7);"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 form-group">
+          <Button class="btn btn-primary">Submit</Button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
